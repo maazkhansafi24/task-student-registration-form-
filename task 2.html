@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>University Admission Form</title>
+
+    <style>
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: underline;
+        }
+
+        h2 {
+            color: dark;
+            text-align: left;
+            word-spacing: 3px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+
+        .form-box {
+            background-color: white;
+            width: 70%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #555;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            padding: 7px;
+            margin: 6px 0;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 95%;
+        }
+
+        textarea {
+            height: 80px;
+            resize: vertical;
+        }
+
+        .subjects input {
+            width: auto;
+        }
+
+        .buttons input {
+            width: 100px;
+            background-color: lightblue;
+            border: 1px solid black;
+            font-weight: bold;
+        }
+
+        table {
+            width: 90%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightblue;
+            color: black;
+            text-transform: uppercase;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            width: 80%;
+            height: 250px;
+        }
+
+        .media {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        pre {
+            background-color: #222;
+            color: white;
+            padding: 15px;
+            overflow-x: auto;
+            font-size: 13px;
+        }
+
+        code {
+            font-family: Consolas;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>University Admission Form</h1>
+
+    <p>
+        Welcome to our university admission page. Please fill in the form
+        carefully and provide correct information.
+    </p>
+
+    <div class="form-box">
+
+        <form>
+
+            <h2>Personal Information</h2>
+
+            <label>First Name:</label><br>
+            <input type="text" name="firstname" placeholder="Enter your first name">
+            <br>
+
+            <label>Last Name:</label><br>
+            <input type="text" name="lastname" placeholder="Enter your last name">
+            <br>
+
+            <label>Password:</label><br>
+            <input type="password" name="password" placeholder="Enter password">
+            <br>
+
+            <label>Date of Birth:</label><br>
+            <input type="date" name="dob">
+            <br>
+
+            <label>Gender:</label><br>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
+            <br><br>
+
+
+            <h2>Contact Information</h2>
+
+            <label>Email:</label><br>
+            <input type="email" name="email" placeholder="example@gmail.com">
+            <br>
+
+            <label>Phone Number:</label><br>
+            <input type="tel" name="phone" placeholder="03XX-XXXXXXX">
+            <br>
+
+            <label>City:</label><br>
+            <select name="city">
+                <option>Select City</option>
+                <option>Mardan</option>
+                <option>Peshawar</option>
+                <option>Islamabad</option>
+                <option>Lahore</option>
+                <option>Karachi</option>
+            </select>
+            <br>
+
+            <label>Address:</label><br>
+            <textarea name="address" placeholder="Enter your complete address"></textarea>
+            <br>
+
+
+            <h2>Academic Information</h2>
+
+            <label>Previous Marks:</label><br>
+            <input type="number" name="marks" placeholder="Enter marks">
+            <br>
+
+            <label>Preferred Program:</label><br>
+            <select name="program">
+                <option>Select Program</option>
+                <option>Computer Science</option>
+                <option>Software Engineering</option>
+                <option>Information Technology</option>
+                <option>Artificial Intelligence</option>
+                <option>Cyber Security</option>
+            </select>
+            <br>
+
+
+            <h2>Subjects / Skills</h2>
+
+            <div class="subjects">
+                <input type="checkbox" name="skill" value="programming">
+                Programming
+
+                <input type="checkbox" name="skill" value="web">
+                Web Development
+
+                <input type="checkbox" name="skill" value="database">
+                Database
+
+                <input type="checkbox" name="skill" value="networking">
+                Networking
+
+                <input type="checkbox" name="skill" value="design">
+                Graphic Design
+            </div>
+
+            <br>
+
+
+            <h2>Profile Picture</h2>
+
+            <label>Upload Picture:</label><br>
+            <input type="file" name="picture" accept="image/*">
+            <br>
+
+
+            <h2>Additional Information</h2>
+
+            <label>Why do you want to join this university?</label><br>
+            <textarea name="reason"
+                placeholder="Write your reason here..."></textarea>
+            <br><br>
+
+
+            <div class="buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+
+        </form>
+
+    </div>
+
+
+    <h2>Student Information</h2>
+
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>Department</th>
+        </tr>
+
+        <tr>
+            <td>Ali</td>
+            <td>Khan</td>
+            <td>ali@gmail.com</td>
+            <td>Computer Science</td>
+        </tr>
+
+        <tr>
+            <td>Ahmed</td>
+            <td>Shah</td>
+            <td>ahmed@gmail.com</td>
+            <td>Software Engineering</td>
+        </tr>
+
+        <tr>
+            <td>Usman</td>
+            <td>Ali</td>
+            <td>usman@gmail.com</td>
+            <td>Information Technology</td>
+        </tr>
+
+        <tr>
+            <td>Hamza</td>
+            <td>Malik</td>
+            <td>hamza@gmail.com</td>
+            <td>Artificial Intelligence</td>
+        </tr>
+
+        <tr>
+            <td>Bilal</td>
+            <td>Ahmad</td>
+            <td>bilal@gmail.com</td>
+            <td>Cyber Security</td>
+        </tr>
+    </table>
+
+
+    <div class="media">
+
+        <h2>University Website</h2>
+
+        <iframe src="https://www.uetmardan.edu.pk/uetm/"></iframe>
+
+        <h2>University Video</h2>
+
+        <video width="500" controls>
+            <source src="WhatsApp Video 2026-09-17 at 8.13.00 PM.mp4" type="video/mp4">
+            
+        </video>
+
+        <h2>University Audio</h2>
+
+        <audio controls>
+            <source src="WhatsApp Video 2026-09-17 at 8.13.00 PM.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+
+    </div>
+
+
+    <h2>Complete HTML Code</h2>
+
+    <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;University Admission Form&lt;/title&gt;
+
+    &lt;style&gt;
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-decoration: underline;
+        }
+
+        h2 {
+            color: darkgreen;
+            text-align: left;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            text-align: justify;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;University Admission Form&lt;/h1&gt;
+
+    &lt;form&gt;
+
+        &lt;h2&gt;Personal Information&lt;/h2&gt;
+
+        &lt;label&gt;First Name:&lt;/label&gt;
+        &lt;input type="text"&gt;
+
+        &lt;label&gt;Last Name:&lt;/label&gt;
+        &lt;input type="text"&gt;
+
+        &lt;label&gt;Password:&lt;/label&gt;
+        &lt;input type="password"&gt;
+
+        &lt;label&gt;Date of Birth:&lt;/label&gt;
+        &lt;input type="date"&gt;
+
+        &lt;label&gt;Gender:&lt;/label&gt;
+        &lt;input type="radio" name="gender"&gt; Male
+        &lt;input type="radio" name="gender"&gt; Female
+
+        &lt;h2&gt;Contact Information&lt;/h2&gt;
+
+        &lt;input type="email" placeholder="Email"&gt;
+        &lt;input type="tel" placeholder="Phone"&gt;
+
+        &lt;select&gt;
+            &lt;option&gt;Mardan&lt;/option&gt;
+            &lt;option&gt;Peshawar&lt;/option&gt;
+            &lt;option&gt;Islamabad&lt;/option&gt;
+        &lt;/select&gt;
+
+        &lt;textarea placeholder="Address"&gt;&lt;/textarea&gt;
+
+        &lt;h2&gt;Academic Information&lt;/h2&gt;
+
+        &lt;input type="number" placeholder="Previous Marks"&gt;
+
+        &lt;select&gt;
+            &lt;option&gt;Computer Science&lt;/option&gt;
+            &lt;option&gt;Software Engineering&lt;/option&gt;
+            &lt;option&gt;Cyber Security&lt;/option&gt;
+        &lt;/select&gt;
+
+        &lt;h2&gt;Subjects / Skills&lt;/h2&gt;
+
+        &lt;input type="checkbox"&gt; Programming
+        &lt;input type="checkbox"&gt; Web Development
+        &lt;input type="checkbox"&gt; Database
+        &lt;input type="checkbox"&gt; Networking
+
+        &lt;h2&gt;Profile Picture&lt;/h2&gt;
+
+        &lt;input type="file" accept="image/*"&gt;
+
+        &lt;h2&gt;Additional Information&lt;/h2&gt;
+
+        &lt;textarea&gt;&lt;/textarea&gt;
+
+        &lt;input type="submit" value="Submit"&gt;
+        &lt;input type="reset" value="Reset"&gt;
+
+    &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+    </code></pre>
+
+</body>
+</html>
+```
